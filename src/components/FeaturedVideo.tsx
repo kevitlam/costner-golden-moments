@@ -19,7 +19,7 @@ export const FeaturedVideo = () => {
           <Card className="bg-stone-800/50 border-stone-700 overflow-hidden shadow-2xl">
             <div className="aspect-video relative group cursor-pointer">
               <img
-                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&h=720&q=80"
+                src="/lovable-uploads/f88e7212-1023-40c8-a7ce-9f664b6267d8.png"
                 alt="Kevin Costner Interview"
                 className="w-full h-full object-cover"
               />

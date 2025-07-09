@@ -4,12 +4,12 @@ import { Quote } from "lucide-react";
 
 export const Gallery = () => {
   const galleryImages = [
-    { src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin on set" },
-    { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin in formal wear" },
-    { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin outdoors" },
-    { src: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin with co-stars" },
-    { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin portrait" },
-    { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin professional shot" }
+    { src: "/lovable-uploads/ad92aefc-88b5-436e-9f81-958cc808de7c.png", alt: "Kevin Costner formal portrait" },
+    { src: "/lovable-uploads/712abbe8-be8f-44fa-a876-d3f987529567.png", alt: "Kevin with family at beach" },
+    { src: "/lovable-uploads/43c1e7a1-74e6-477c-89c5-5a5bc91a9ef7.png", alt: "Kevin with partner at awards ceremony" },
+    { src: "/lovable-uploads/f88e7212-1023-40c8-a7ce-9f664b6267d8.png", alt: "Kevin during podcast interview" },
+    { src: "/lovable-uploads/6b54aa3f-1e78-45bc-91a8-623e0ed03684.png", alt: "Kevin professional headshot" },
+    { src: "/lovable-uploads/ad92aefc-88b5-436e-9f81-958cc808de7c.png", alt: "Kevin at red carpet event" }
   ];
 
   const testimonials = [

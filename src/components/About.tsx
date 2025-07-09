@@ -34,7 +34,7 @@ export const About = () => {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=480&h=600&q=80"
+                src="/lovable-uploads/ad92aefc-88b5-436e-9f81-958cc808de7c.png"
                 alt="Kevin Costner"
                 className="w-full h-full object-cover"
               />
