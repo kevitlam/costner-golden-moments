@@ -4,12 +4,12 @@ import { Quote } from "lucide-react";
 
 export const Gallery = () => {
   const galleryImages = [
-    { src: "/placeholder.svg?height=400&width=300&text=Kevin+on+Yellowstone+Set", alt: "Kevin on Yellowstone Set" },
-    { src: "/placeholder.svg?height=400&width=300&text=Dances+with+Wolves+BTS", alt: "Behind the scenes of Dances with Wolves" },
-    { src: "/placeholder.svg?height=400&width=300&text=Kevin+with+Fans", alt: "Kevin meeting fans" },
-    { src: "/placeholder.svg?height=400&width=300&text=Field+of+Dreams+Scene", alt: "Field of Dreams scene" },
-    { src: "/placeholder.svg?height=400&width=300&text=Kevin+Family+Beach", alt: "Kevin with family at beach" },
-    { src: "/placeholder.svg?height=400&width=300&text=Awards+Ceremony", alt: "Kevin at awards ceremony" }
+    { src: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin on set" },
+    { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin in formal wear" },
+    { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin outdoors" },
+    { src: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin with co-stars" },
+    { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin portrait" },
+    { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=400&q=80", alt: "Kevin professional shot" }
   ];
 
   const testimonials = [
