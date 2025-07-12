@@ -35,12 +35,12 @@ export const FeaturedVideo = () => {
           </Card>
         </div>
 
-        {/* Secondary Video Preview */}
+        {/* Secondary Video Preview - Using Vimeo Thumbnail */}
         <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
           <Card className="bg-stone-800/50 border-stone-700 overflow-hidden shadow-2xl">
             <div className="aspect-video relative group cursor-pointer">
               <img
-                src="/lovable-uploads/f88e7212-1023-40c8-a7ce-9f664b6267d8.png"
+                src="https://vumbnail.com/1100855873.jpg"
                 alt="Kevin Costner Interview Preview"
                 className="w-full h-full object-cover"
               />

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -54,15 +54,33 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button - Much Larger size */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden text-stone-200 w-16 h-16 sm:w-20 sm:h-20 hover:bg-amber-600/20"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={40} className="sm:w-12 sm:h-12" /> : <Menu size={40} className="sm:w-12 sm:h-12" />}
-          </Button>
+          {/* Support Chat & Mobile Menu Button */}
+          <div className="flex items-center space-x-2">
+            {/* Chat Support Icon */}
+            <a
+              href="https://t.me/PrivateLiveChat12345"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-400 hover:text-amber-300 transition-colors p-2 hover:bg-amber-600/20 rounded-full"
+              title="💬 Chat Support - Get Instant Help!"
+            >
+              <MessageCircle size={24} className="sm:w-8 sm:h-8" />
+            </a>
+
+            {/* Mobile Menu Button - Much Larger size */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden text-stone-200 w-16 h-16 sm:w-20 sm:h-20 hover:bg-amber-600/20"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X size={56} className="sm:w-16 sm:h-16" />
+              ) : (
+                <Menu size={56} className="sm:w-16 sm:h-16" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -81,6 +99,17 @@ export const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Chat Support Link */}
+              <a
+                href="https://t.me/PrivateLiveChat12345"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left px-6 py-4 text-lg font-medium text-amber-400 hover:text-amber-300 hover:bg-stone-800/50 transition-all duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                💬 Chat Support
+              </a>
             </div>
           </div>
         )}
