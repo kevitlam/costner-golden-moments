@@ -1,27 +1,61 @@
 
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const contactMethods = [
+    {
+      icon: Mail,
+      label: "🔥 VIP Private Access",
+      value: "kevincostnerchat2025@gmail.com",
+      description: "Direct line to Kevin's inner circle"
+    },
+    {
+      icon: Mail,
+      label: "💼 Business Opportunities",
+      value: "Jeff.moore918@gmail.com",
+      description: "Film investments & partnerships"
+    },
+    {
+      icon: Mail,
+      label: "💎 Exclusive Content",
+      value: "privatelivechat3@gmail.com",
+      description: "Behind-the-scenes access"
+    },
+    {
+      icon: Phone,
+      label: "📞 Direct Hotline",
+      value: "+1 689-201-2277",
+      description: "Call now for instant access"
+    },
+    {
+      icon: MessageCircle,
+      label: "⚡ Instant Connection",
+      value: "@PrivateLiveChat12345",
+      href: "https://t.me/PrivateLiveChat12345",
+      description: "Join Kevin's private Telegram"
+    }
+  ];
+
   return (
     <footer className="bg-stone-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-amber-400">Kevin Costner</h3>
             <p className="text-stone-400 text-sm leading-relaxed">
-              Exclusive meet and greet experiences with Academy Award winner Kevin Costner. 
-              Creating unforgettable memories for fans worldwide.
+              Academy Award winner Kevin Costner's official platform for exclusive experiences, 
+              film investments, and direct access to Hollywood's most authentic star.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white">Quick Access</h4>
             <div className="space-y-2">
-              {["About Kevin", "Experiences", "Gallery", "FAQ", "Register"].map((link) => (
+              {["Personal Story", "Film Investments", "Private Events", "Gallery", "Donations"].map((link) => (
                 <button
                   key={link}
                   onClick={() => document.getElementById(link.toLowerCase().replace(" ", ""))?.scrollIntoView({ behavior: 'smooth' })}
@@ -30,25 +64,6 @@ export const Footer = () => {
                   {link}
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact</h4>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-stone-400 text-sm">
-                <Mail className="w-4 h-4" />
-                <span>info@kevincostnerevents.com</span>
-              </div>
-              <div className="flex items-center space-x-2 text-stone-400 text-sm">
-                <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2 text-stone-400 text-sm">
-                <MapPin className="w-4 h-4" />
-                <span>Los Angeles, CA</span>
-              </div>
             </div>
           </div>
 
@@ -72,9 +87,37 @@ export const Footer = () => {
               ))}
             </div>
             <div className="text-stone-400 text-sm">
-              <p className="mb-1">Official Yellowstone</p>
+              <p className="mb-1">Official Yellowstone Star</p>
               <p>Kevin Costner & Modern West</p>
             </div>
+          </div>
+        </div>
+
+        {/* Contact Methods Section */}
+        <div className="border-t border-stone-800 pt-8 mb-8">
+          <h4 className="text-xl font-bold text-amber-400 mb-6 text-center">🌟 Get Direct Access to Kevin Costner 🌟</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {contactMethods.map((contact, index) => (
+              <div key={index} className="bg-stone-800/50 p-4 rounded-lg hover:bg-stone-800/70 transition-colors">
+                <div className="flex items-start space-x-3">
+                  <contact.icon className="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-amber-400 font-bold text-sm mb-1">{contact.label}</div>
+                    {contact.href ? (
+                      <a href={contact.href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-amber-400 transition-colors text-sm break-all">
+                        {contact.value}
+                      </a>
+                    ) : (
+                      <div className="text-white text-sm break-all">{contact.value}</div>
+                    )}
+                    <div className="text-stone-400 text-xs mt-1">{contact.description}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <p className="text-amber-400 font-bold text-lg">🎬 Don't miss your chance to connect with a Hollywood legend! 🎬</p>
           </div>
         </div>
 
@@ -82,7 +125,7 @@ export const Footer = () => {
         <div className="border-t border-stone-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-stone-400 text-sm">
-              © {currentYear} Kevin Costner Events. All rights reserved.
+              © {currentYear} Kevin Costner Official. All rights reserved.
             </div>
             <div className="flex space-x-8 text-stone-400 text-sm">
               <a href="#" className="hover:text-amber-400 transition-colors">Privacy Policy</a>

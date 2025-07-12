@@ -54,14 +54,14 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button - Larger size */}
+          {/* Mobile Menu Button - Much Larger size */}
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-stone-200 w-12 h-12 sm:w-14 sm:h-14"
+            className="lg:hidden text-stone-200 w-16 h-16 sm:w-20 sm:h-20 hover:bg-amber-600/20"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={32} className="sm:w-8 sm:h-8" /> : <Menu size={32} className="sm:w-8 sm:h-8" />}
+            {isOpen ? <X size={40} className="sm:w-12 sm:h-12" /> : <Menu size={40} className="sm:w-12 sm:h-12" />}
           </Button>
         </div>
 
