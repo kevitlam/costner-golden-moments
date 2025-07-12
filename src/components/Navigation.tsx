@@ -27,31 +27,25 @@ export const Navigation = () => {
     { name: "Gallery", path: "/gallery" }
   ];
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-    setIsOpen(false);
-  };
-
   const isHomePage = location.pathname === "/";
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-stone-900/95 backdrop-blur-sm" : "bg-transparent"
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-amber-400">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          <Link to="/" className="text-xl sm:text-2xl lg:text-3xl font-bold text-amber-400 truncate">
             Kevin Costner
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-stone-200 hover:text-amber-400 transition-colors font-medium ${
+                className={`text-stone-200 hover:text-amber-400 transition-colors font-medium text-sm xl:text-base ${
                   location.pathname === item.path ? "text-amber-400" : ""
                 }`}
               >
@@ -60,32 +54,34 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Larger size */}
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-stone-200"
+            className="lg:hidden text-stone-200 w-12 h-12 sm:w-14 sm:h-14"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={32} className="sm:w-8 sm:h-8" /> : <Menu size={32} className="sm:w-8 sm:h-8" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-stone-900/95 backdrop-blur-sm py-4">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`block w-full text-left px-4 py-2 text-stone-200 hover:text-amber-400 transition-colors ${
-                  location.pathname === item.path ? "text-amber-400" : ""
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="lg:hidden bg-stone-900/98 backdrop-blur-sm border-t border-stone-700">
+            <div className="py-4 space-y-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`block w-full text-left px-6 py-4 text-lg font-medium text-stone-200 hover:text-amber-400 hover:bg-stone-800/50 transition-all duration-200 ${
+                    location.pathname === item.path ? "text-amber-400 bg-stone-800/30" : ""
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>

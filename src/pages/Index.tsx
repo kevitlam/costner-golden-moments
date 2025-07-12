@@ -18,49 +18,49 @@ const Index = () => {
       <FeaturedVideo />
       
       {/* Quick Access Section */}
-      <section className="py-20 bg-gradient-to-b from-stone-900 to-amber-950">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-stone-900 to-amber-950">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-8 sm:mb-12 leading-tight">
             Explore <span className="text-amber-400">More</span>
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Link to="/story">
-              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 text-amber-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold text-white mb-3">Kevin's Story</h3>
-                  <p className="text-stone-300">Discover the personal journey, triumphs, and challenges</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <Link to="/story" className="block">
+              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group h-full">
+                <CardContent className="p-4 sm:p-6 text-center h-full flex flex-col">
+                  <Users className="w-10 h-10 sm:w-12 sm:h-12 text-amber-400 mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Kevin's Story</h3>
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed flex-grow">Discover the personal journey, triumphs, and challenges</p>
                 </CardContent>
               </Card>
             </Link>
             
-            <Link to="/investments">
-              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6 text-center">
-                  <Film className="w-12 h-12 text-amber-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold text-white mb-3">Film Investments</h3>
-                  <p className="text-stone-300">Invest in the next generation of Kevin's films</p>
+            <Link to="/investments" className="block">
+              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group h-full">
+                <CardContent className="p-4 sm:p-6 text-center h-full flex flex-col">
+                  <Film className="w-10 h-10 sm:w-12 sm:h-12 text-amber-400 mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Film Investments</h3>
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed flex-grow">Invest in the next generation of Kevin's films</p>
                 </CardContent>
               </Card>
             </Link>
             
-            <Link to="/donations">
-              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6 text-center">
-                  <Heart className="w-12 h-12 text-amber-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold text-white mb-3">Support Causes</h3>
-                  <p className="text-stone-300">Join Kevin in making a difference in the world</p>
+            <Link to="/donations" className="block">
+              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group h-full">
+                <CardContent className="p-4 sm:p-6 text-center h-full flex flex-col">
+                  <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-amber-400 mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Support Causes</h3>
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed flex-grow">Join Kevin in making a difference in the world</p>
                 </CardContent>
               </Card>
             </Link>
             
-            <Link to="/events">
-              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group">
-                <CardContent className="p-6 text-center">
-                  <DollarSign className="w-12 h-12 text-amber-400 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <h3 className="text-xl font-bold text-white mb-3">Exclusive Events</h3>
-                  <p className="text-stone-300">Meet Kevin at intimate, unforgettable experiences</p>
+            <Link to="/events" className="block">
+              <Card className="bg-stone-800/50 border-stone-700 hover:border-amber-600 transition-all duration-300 cursor-pointer group h-full">
+                <CardContent className="p-4 sm:p-6 text-center h-full flex flex-col">
+                  <DollarSign className="w-10 h-10 sm:w-12 sm:h-12 text-amber-400 mx-auto mb-3 sm:mb-4 group-hover:scale-110 transition-transform" />
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3">Exclusive Events</h3>
+                  <p className="text-stone-300 text-sm sm:text-base leading-relaxed flex-grow">Meet Kevin at intimate, unforgettable experiences</p>
                 </CardContent>
               </Card>
             </Link>
