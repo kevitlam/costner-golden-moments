@@ -29,6 +29,10 @@ export const Navigation = () => {
 
   const isHomePage = location.pathname === "/";
 
+  const handleChatSupport = () => {
+    window.open("https://t.me/PrivateLiveChat12345", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? "bg-stone-900/95 backdrop-blur-sm" : "bg-transparent"
@@ -57,27 +61,29 @@ export const Navigation = () => {
           {/* Support Chat & Mobile Menu Button */}
           <div className="flex items-center space-x-2">
             {/* Chat Support Icon */}
-            <a
-              href="https://t.me/PrivateLiveChat12345"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={handleChatSupport}
               className="text-amber-400 hover:text-amber-300 transition-colors p-2 hover:bg-amber-600/20 rounded-full"
               title="💬 Chat Support - Get Instant Help!"
             >
               <MessageCircle size={24} className="sm:w-8 sm:h-8" />
-            </a>
+            </button>
 
-            {/* Mobile Menu Button - Extra Large Hamburger */}
+            {/* Mobile Menu Button - Much Larger Hamburger */}
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-stone-200 w-20 h-20 sm:w-24 sm:h-24 hover:bg-amber-600/20"
+              className="lg:hidden text-stone-200 w-24 h-24 sm:w-28 sm:h-28 hover:bg-amber-600/20 relative"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
-                <X size={72} className="sm:w-20 sm:h-20" />
+                <X size={80} className="sm:w-24 sm:h-24" strokeWidth={3} />
               ) : (
-                <Menu size={72} className="sm:w-20 sm:h-20" />
+                <div className="flex flex-col space-y-2">
+                  <div className="w-10 h-1.5 bg-current rounded-full sm:w-12 sm:h-2"></div>
+                  <div className="w-10 h-1.5 bg-current rounded-full sm:w-12 sm:h-2"></div>
+                  <div className="w-10 h-1.5 bg-current rounded-full sm:w-12 sm:h-2"></div>
+                </div>
               )}
             </Button>
           </div>
@@ -101,15 +107,15 @@ export const Navigation = () => {
               ))}
               
               {/* Mobile Chat Support Link */}
-              <a
-                href="https://t.me/PrivateLiveChat12345"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => {
+                  handleChatSupport();
+                  setIsOpen(false);
+                }}
                 className="block w-full text-left px-6 py-4 text-lg font-medium text-amber-400 hover:text-amber-300 hover:bg-stone-800/50 transition-all duration-200"
-                onClick={() => setIsOpen(false)}
               >
                 💬 Chat Support
-              </a>
+              </button>
             </div>
           </div>
         )}
