@@ -67,17 +67,17 @@ export const Navigation = () => {
               <MessageCircle size={24} className="sm:w-8 sm:h-8" />
             </a>
 
-            {/* Mobile Menu Button - Much Larger size */}
+            {/* Mobile Menu Button - Extra Large Hamburger */}
             <Button
               variant="ghost"
               size="icon"
-              className="lg:hidden text-stone-200 w-16 h-16 sm:w-20 sm:h-20 hover:bg-amber-600/20"
+              className="lg:hidden text-stone-200 w-20 h-20 sm:w-24 sm:h-24 hover:bg-amber-600/20"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
-                <X size={56} className="sm:w-16 sm:h-16" />
+                <X size={72} className="sm:w-20 sm:h-20" />
               ) : (
-                <Menu size={56} className="sm:w-16 sm:h-16" />
+                <Menu size={72} className="sm:w-20 sm:h-20" />
               )}
             </Button>
           </div>

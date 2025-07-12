@@ -35,12 +35,12 @@ export const FeaturedVideo = () => {
           </Card>
         </div>
 
-        {/* Secondary Video Preview - Using Vimeo Thumbnail */}
+        {/* Secondary Video Preview - Original Thumbnail */}
         <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
           <Card className="bg-stone-800/50 border-stone-700 overflow-hidden shadow-2xl">
             <div className="aspect-video relative group cursor-pointer">
               <img
-                src="https://vumbnail.com/1100855873.jpg"
+                src="/lovable-uploads/f88e7212-1023-40c8-a7ce-9f664b6267d8.png"
                 alt="Kevin Costner Interview Preview"
                 className="w-full h-full object-cover"
               />
@@ -55,6 +55,26 @@ export const FeaturedVideo = () => {
                   <p className="text-stone-300 text-xs sm:text-sm">Untold stories from four decades in entertainment</p>
                 </div>
               </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Third Video - New Vimeo Video */}
+        <div className="max-w-4xl mx-auto mb-8 sm:mb-12">
+          <Card className="bg-stone-800/50 border-stone-700 overflow-hidden shadow-2xl">
+            <div className="relative" style={{ padding: "153.33% 0 0 0", position: "relative" }}>
+              <iframe 
+                src="https://player.vimeo.com/video/1100855873?badge=0&autopause=0&player_id=0&app_id=58479" 
+                frameBorder="0" 
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="Kevin Costner Private Interview"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="p-4 sm:p-6">
+              <h3 className="text-white font-bold text-lg sm:text-xl mb-2">🎭 Kevin Costner: Private Moments</h3>
+              <p className="text-stone-300 text-sm sm:text-base">Intimate conversation revealing never-before-shared stories from his legendary career</p>
             </div>
           </Card>
         </div>
